@@ -1,0 +1,89 @@
+.hero {
+  background: linear-gradient(135deg, #0f172a, #3b82f6);
+  color: white;
+  min-height: 100vh;
+  /* Elimina display: flex */
+  padding: clamp(4rem, 10vw, 8rem) 1rem 2rem;
+  /* Centra el contenido con text-align + margin auto */
+  text-align: center;
+}
+.hero > div {
+  max-width: 52rem; /* = max-w-2xl */
+  margin: 0 auto;
+}
+.text-justify {
+  text-align: justify;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-caption {
+  margin-top: 0.75rem;
+  max-width: 100%;
+  word-break: break-word;
+}
+/* Efectos de hover para enlaces */
+.text-decoration-none:hover {
+  text-decoration: underline !important;
+}
+
+.hover\:text-white:hover {
+  color: white !important;
+}
+
+.hover\:text-success:hover {
+  color: #16a34a !important; /* verde de Bootstrap success */
+}
+
+.hover\:text-primary:hover {
+  color: #0d6efd !important;
+}
+
+.transition-colors {
+  transition: color 0.2s ease;
+}
+/* Colores personalizados para fondos */
+.bg-blue-50 {
+  background-color: #f0f9ff;
+}
+.bg-cyan-50 {
+  background-color: #f0fdfd;
+}
+.bg-gray-50 {
+  background-color: #f8f9fa;
+}
+
+/* Botón redondeado */
+.btn-outline-dark {
+  border-width: 2px;
+  font-weight: 500;
+}
+.btn-outline-dark:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
