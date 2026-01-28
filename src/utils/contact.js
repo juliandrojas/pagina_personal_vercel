@@ -3,7 +3,7 @@
 const CONTACT = {
   // WhatsApp (número sin + ni espacios)
   whatsapp: {
-    number: "573001234567",
+    number: "573164167536",
     message:
       "Hola%20Juli%C3%A1n%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20gustar%C3%ADa%20contactarte.",
   },

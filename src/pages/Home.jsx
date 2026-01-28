@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
@@ -5,6 +6,21 @@ import Title from "../components/Title";
 import { WHATSAPP_URL } from "../utils/contact.js";
 
 export default function Home() {
+  // 👇 Inicializa tooltips de Bootstrap
+  useEffect(() => {
+    const tooltipTriggerList = [].slice.call(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
+    );
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new window.bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Limpieza al desmontar
+    return () => {
+      tooltipTriggerList.forEach((tooltip) => tooltip.dispose?.());
+    };
+  }, []);
+
   const gallerySkillsImages = [
     {
       src: "/src/assets/react.svg",
@@ -14,7 +30,7 @@ export default function Home() {
     {
       src: "/vite.svg",
       alt: "Proyecto de e-commerce",
-      description: "Tienda en línea con carrito y pagos integrados",
+      description: "Desarrollo de Aplicaciones Web y Móviles",
     },
     // ... más elementos
   ];
@@ -142,7 +158,7 @@ export default function Home() {
         </section>
         <section id="skills" className="mt-6 pt-3 pb-3">
           <Title text="Habilidades" />
-          <Gallery images={gallerySkillsImages} />
+          <Gallery images={gallerySkillsImages} interactive={false} />
         </section>
         <section id="projects" className="mt-6 pt-3">
           <Title text="Proyectos" />
