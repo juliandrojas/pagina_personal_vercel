@@ -42,7 +42,7 @@ export default function Home() {
       type: "proyecto", // ← clave para personalizar
     },
     {
-      src: "/public/vite.svg",
+      src: "/img-patrones.jpeg",
       alt: "Uso de Patrones de Software en Java",
       description: "Uso de Patrones de Software en Java",
       type: "proyecto",
