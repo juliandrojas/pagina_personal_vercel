@@ -23,13 +23,13 @@ export default function Home() {
 
   const gallerySkillsImages = [
     {
-      src: "/src/assets/react.svg",
-      alt: "Logo de React",
+      src: "/logo.jpeg",
+      alt: "Tutorías Personalizadas",
       description: "Tutorías Personalizadas",
     },
     {
       src: "/vite.svg",
-      alt: "Proyecto de e-commerce",
+      alt: "Desarrollo de Aplicaciones",
       description: "Desarrollo de Aplicaciones Web y Móviles",
     },
     // ... más elementos
@@ -42,10 +42,11 @@ export default function Home() {
       type: "proyecto", // ← clave para personalizar
     },
     {
-      src: "/src/assets/react.svg",
-      alt: "Blog: Guía de React",
-      description: "Aprende patrones avanzados",
+      src: "/public/vite.svg",
+      alt: "Uso de Patrones de Software en Java",
+      description: "Uso de Patrones de Software en Java",
       type: "proyecto",
+      link: "https://github.com/juliandrojas/ProyectoSmartHomeExposicion",
     },
   ];
   return (

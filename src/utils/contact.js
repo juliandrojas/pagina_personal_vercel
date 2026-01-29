@@ -1,5 +1,3 @@
-// src/utils/contact.js
-
 const CONTACT = {
   // WhatsApp (número sin + ni espacios)
   whatsapp: {

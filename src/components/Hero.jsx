@@ -9,7 +9,7 @@ export default function Hero() {
     { title: "Sobre mí", url: "#about_me" },
     { title: "Habilidades", url: "#skills" },
     { title: "Proyectos", url: "#projects" },
-    { title: "Blog", url: "#curiosities" },
+    { title: "Blog", url: "#blog" },
     { title: "Contacto", url: "#contact" },
   ];
 
