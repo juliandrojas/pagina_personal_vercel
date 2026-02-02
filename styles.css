@@ -1,10 +1,8 @@
 .hero {
-  background: linear-gradient(135deg, #0f172a, #3b82f6);
+  background: linear-gradient(135deg, #0c0a1d, #06b6d4);
   color: white;
   min-height: 100vh;
-  /* Elimina display: flex */
   padding: clamp(4rem, 10vw, 8rem) 1rem 2rem;
-  /* Centra el contenido con text-align + margin auto */
   text-align: center;
 }
 .hero > div {
@@ -86,4 +84,7 @@
 }
 .btn-outline-dark:hover {
   background-color: rgba(0, 0, 0, 0.05);
+}
+.text-cyan-200 {
+  color: #7dd3fc; /* cyan claro, muy legible sobre fondo oscuro */
 }

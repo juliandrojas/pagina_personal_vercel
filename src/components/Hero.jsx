@@ -1,5 +1,3 @@
-// Hero.jsx
-
 import { WHATSAPP_URL } from "../utils/contact.js";
 import Navbar from "./Navbar";
 
@@ -19,7 +17,7 @@ export default function Hero() {
       <div className="hero">
         <div className="text-white w-full max-w-2xl mx-auto px-3 text-center">
           <h1 className="hero-title mb-2">Bienvenido a mi página personal</h1>
-          <p className="text-primary fw-bold mb-4 fs-6 text-center">
+          <p className="text-cyan-200 fw-bold mb-4 fs-6 text-center">
             🛠️ Ingeniero | 🌱 Aprendiz constante | 🤝 Colaborador efectivo
           </p>
           <a
