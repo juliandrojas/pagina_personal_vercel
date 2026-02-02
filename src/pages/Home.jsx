@@ -28,7 +28,7 @@ export default function Home() {
       description: "Tutorías Personalizadas",
     },
     {
-      src: "/img-desarrollo-apps.jpeg",
+      src: "/img-apps.png",
       alt: "Desarrollo de Aplicaciones",
       description: "Desarrollo de Aplicaciones Web y Móviles",
     },
@@ -36,7 +36,7 @@ export default function Home() {
   ];
   const galleryProjectsImages = [
     {
-      src: "/img-biblioteca.jpeg",
+      src: "/img-biblioteca.png",
       alt: "Sistema de biblioteca",
       description: "Prototipo de gestión de libros",
       type: "proyecto", // ← clave para personalizar
