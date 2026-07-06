@@ -53,7 +53,7 @@ export default function Home() {
       alt: "SICAE",
       description: "Sistema de Control de Asignación de Equipos",
       type: "proyecto",
-      link: "https://github.com/juliandrojas/SIGEC-Petrocasinos-frontend",
+      link: "https://sicaepetrocasinos.vercel.app/login",
     },
   ];
   return (
