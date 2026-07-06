@@ -48,6 +48,13 @@ export default function Home() {
       type: "proyecto",
       link: "https://github.com/juliandrojas/ProyectoSmartHomeExposicion",
     },
+    {
+      src: "/img-biblioteca.png",
+      alt: "SICAE",
+      description: "Sistema de Control de Asignación de Equipos",
+      type: "proyecto",
+      link: "https://github.com/juliandrojas/SIGEC-Petrocasinos-frontend",
+    },
   ];
   return (
     <div>
