@@ -12,8 +12,8 @@ export const galleryProjectsImages = [
   {
     src: "/kazu-bot-tutorias.png",
     alt: "Kazu, asistente de WhatsApp para tutorías, frente a un portátil y material de estudio",
-    title: "Kazu — asistente de tutorías",
-    summary: "Asistente de WhatsApp que organiza solicitudes y ofrece una primera atención ágil para mi servicio de tutorías.",
+    title: "Kazu: Mi asistente de WhatsApp para tutorías",
+    summary: "Kazu es mi asistente conversacional creado para organizar solicitudes y ofrecer una primera atención más ágil a las personas interesadas en mis tutorías.",
     type: "Automatización conversacional",
     stack: ["WhatsApp", "Automatización", "Tutorías"],
     link: "/proyectos/bot-tutorias-whatsapp",

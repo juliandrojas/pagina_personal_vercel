@@ -19,8 +19,8 @@ export const caseStudies = {
   },
   "bot-tutorias-whatsapp": {
     type: "Automatización conversacional",
-    title: "Kazu — asistente de WhatsApp para tutorías",
-    lead: "Kazu es un asistente conversacional creado para organizar solicitudes y ofrecer una primera atención más ágil a las personas interesadas en mis tutorías.",
+    title: "Kazu: Mi asistente de WhatsApp para tutorías",
+    lead: "Kazu es mi asistente conversacional creado para organizar solicitudes y ofrecer una primera atención más ágil a las personas interesadas en mis tutorías.",
     image: "/kazu-bot-tutorias.png",
     imageAlt: "Kazu, asistente de tutorías, trabajando junto a un portátil y cuadernos de estudio",
     tags: ["WhatsApp", "Automatización", "Tutorías"],
