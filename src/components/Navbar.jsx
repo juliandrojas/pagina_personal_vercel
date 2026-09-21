@@ -1,29 +1,26 @@
 // Navbar.jsx
+import { Link } from "react-router-dom";
 
-export default function Navbar({
-  brand = "Mi página personal",
-  brandUrl = "/",
-  items = [],
-}) {
+export default function Navbar({ brand = "Julián Rojas", brandUrl = "/", items = [] }) {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-      <div className="container-fluid">
-        <a className="navbar-brand" href={brandUrl}>
+    <nav className="navbar navbar-expand-lg navbar-dark site-nav fixed-top" aria-label="Navegación principal">
+      <div className="container">
+        <Link className="navbar-brand" to={brandUrl}>
           {brand}
-        </a>
+        </Link>
         <button
-          className="navbar-toggler d-lg-none"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapsibleNavId"
-          aria-controls="collapsibleNavId"
+          data-bs-target="#site-navigation"
+          aria-controls="site-navigation"
           aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-label="Abrir menú de navegación"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="collapsibleNavId">
-          <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+        <div className="collapse navbar-collapse" id="site-navigation">
+          <ul className="navbar-nav ms-auto">
             {items.map((item, index) => {
               if (item.disabled) {
                 return (
@@ -35,18 +32,33 @@ export default function Navbar({
                 );
               }
 
+              const isInternalRoute = item.url?.startsWith("/");
+
               return (
                 <li className="nav-item" key={index}>
-                  <a
-                    className={`nav-link ${item.active ? "active" : ""}`}
-                    href={item.url}
-                    aria-current={item.active ? "page" : undefined}
-                  >
-                    {item.title}
-                    {item.active && (
-                      <span className="visually-hidden">(current)</span>
-                    )}
-                  </a>
+                  {isInternalRoute ? (
+                    <Link
+                      className={`nav-link ${item.active ? "active" : ""}`}
+                      to={item.url}
+                      aria-current={item.active ? "page" : undefined}
+                    >
+                      {item.title}
+                      {item.active && (
+                        <span className="visually-hidden">(current)</span>
+                      )}
+                    </Link>
+                  ) : (
+                    <a
+                      className={`nav-link ${item.active ? "active" : ""}`}
+                      href={item.url}
+                      aria-current={item.active ? "page" : undefined}
+                    >
+                      {item.title}
+                      {item.active && (
+                        <span className="visually-hidden">(current)</span>
+                      )}
+                    </a>
+                  )}
                 </li>
               );
             })}

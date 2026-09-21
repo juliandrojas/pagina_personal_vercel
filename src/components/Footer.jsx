@@ -7,19 +7,21 @@ export default function Footer() {
   return (
     <footer className="bg-dark text-light py-3">
       <div className="container">
-        {/* ... otros elementos ... */}
-
-        {/* Botones de redes */}
-        <div className="d-flex justify-content-center gap-2">
+        <div className="footer-links">
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-success btn-sm px-2 py-1 d-flex align-items-center gap-1"
           >
-            <span>💬</span>
-            <span>WA</span>
+            <span aria-hidden="true">↗</span>
+            <span>WhatsApp</span>
           </a>
+          {social.github && (
+            <a href={social.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm px-2 py-1 d-flex align-items-center gap-1">
+              <span aria-hidden="true">↗</span><span>GitHub</span>
+            </a>
+          )}
           {social.facebook && (
             <a
               href={social.facebook}
@@ -27,8 +29,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm px-2 py-1 d-flex align-items-center gap-1"
             >
-              <span>📘</span>
-              <span>FB</span>
+              <span aria-hidden="true">↗</span>
+              <span>Facebook</span>
             </a>
           )}
           {social.instagram && (
@@ -38,8 +40,8 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn btn-info btn-sm px-2 py-1 d-flex align-items-center gap-1"
             >
-              <span>📸</span>
-              <span>IG</span>
+              <span aria-hidden="true">↗</span>
+              <span>Instagram</span>
             </a>
           )}
           {/* Añade más si existen */}

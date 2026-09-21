@@ -4,33 +4,38 @@ import Navbar from "./Navbar";
 export default function Hero() {
   const navItems = [
     { title: "Inicio", url: "/", active: true },
-    { title: "Sobre mí", url: "#about_me" },
-    { title: "Habilidades", url: "#skills" },
+    { title: "Perfil", url: "#about_me" },
+    { title: "Servicios", url: "#skills" },
     { title: "Proyectos", url: "#projects" },
-    { title: "Blog", url: "#blog" },
     { title: "Contacto", url: "#contact" },
   ];
 
   return (
     <>
-      <Navbar items={navItems} brand="Mi página personal" />
-      <div className="hero">
-        <div className="text-white w-full max-w-2xl mx-auto px-3 text-center">
-          <h1 className="hero-title mb-2">Bienvenido a mi página personal</h1>
-          <p className="text-cyan-200 fw-bold mb-4 fs-6 text-center">
-            🛠️ Ingeniero | 🌱 Aprendiz constante | 🤝 Colaborador efectivo
+      <Navbar items={navItems} brand="Julián Rojas" />
+      <header className="hero" aria-labelledby="hero-title">
+        <div className="hero-content">
+          <p className="hero-kicker">Desarrollo web · soluciones a medida</p>
+          <h1 id="hero-title" className="hero-title">
+            Construyo experiencias digitales claras y útiles.
+          </h1>
+          <p className="hero-copy">
+            Soy Julián Rojas, ingeniero de sistemas. Desarrollo aplicaciones web
+            y acompaño proyectos tecnológicos desde la idea hasta una solución funcional.
           </p>
-          <a
-            href={WHATSAPP_URL} // ← usa la variable
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center gap-2 py-3 shadow-lg"
-          >
-            <span>💬</span>
-            <span>Escríbeme por WhatsApp</span>
-          </a>
+          <div className="hero-actions">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success btn-lg hero-primary">
+              Hablemos por WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+            <a className="hero-secondary" href="#projects">Ver proyectos <span aria-hidden="true">↓</span></a>
+          </div>
+          <ul className="hero-signals" aria-label="Áreas de trabajo">
+            <li>Aplicaciones web</li>
+            <li>Tutorías técnicas</li>
+            <li>Soluciones para negocios</li>
+          </ul>
         </div>
-      </div>
+      </header>
     </>
   );
 }

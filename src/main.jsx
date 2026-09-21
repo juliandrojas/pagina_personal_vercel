@@ -3,13 +3,18 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotAvailable from "./components/NotAvailable.jsx";
 import Home from "./pages/Home.jsx";
+import Templates from "./pages/Templates.jsx";
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
   {
-    path: "/not-available",
+    path: "/templates",
+    element: <Templates />,
+  },
+  {
+    path: "*",
     element: <NotAvailable />,
   },
 ]);

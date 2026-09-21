@@ -1,54 +1,31 @@
 // src/components/Gallery.jsx
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Gallery({
-  images,
-  interactive = true,
-  showTooltip = false, // ← nuevo prop: controla explícitamente si mostrar tooltip
-  tooltipMessage = "Próximamente disponible",
-}) {
-  const navigate = useNavigate();
-
-  const handleClick = (item) => {
-    if (!interactive) return;
-
-    if (item.link) {
-      window.open(item.link.trim(), "_blank", "noopener,noreferrer");
-    } else {
-      navigate("/not-available", { state: { type: item.type || "default" } });
-    }
-  };
-
+export default function Gallery({ images }) {
   return (
-    <div className="gallery">
-      {images.map((item, index) => {
-        const shouldShowTooltip =
-          showTooltip && (!interactive || (interactive && !item.link));
+    <div className="project-grid">
+      {images.map((item) => {
+        const isInternal = item.link?.startsWith("/");
 
         return (
-          <div
-            key={index}
-            className="gallery-item position-relative"
-            onClick={interactive ? () => handleClick(item) : undefined}
-            style={{
-              cursor: interactive
-                ? item.link
-                  ? "pointer"
-                  : "not-allowed"
-                : "default",
-            }}
-            // ✅ Solo agrega tooltip si showTooltip === true
-            {...(shouldShowTooltip && {
-              "data-bs-toggle": "tooltip",
-              "data-bs-placement": "top",
-              title: tooltipMessage,
-            })}
-          >
-            <img src={item.src} alt={item.alt} className="gallery-img" />
-            <p className="gallery-caption mt-2 text-center text-muted small text-wrap">
-              {item.description}
-            </p>
-          </div>
+          <article className="project-card" key={item.title || item.description}>
+            <img src={item.src} alt={item.alt} className="project-image" />
+            <div className="project-body">
+              <p className="project-type">{item.type || "Proyecto"}</p>
+              <h3>{item.title || item.description}</h3>
+              <p>{item.summary}</p>
+              {item.stack?.length > 0 && (
+                <ul className="tag-list" aria-label={`Tecnologías usadas en ${item.title || item.description}`}>
+                  {item.stack.map((tag) => <li key={tag}>{tag}</li>)}
+                </ul>
+              )}
+              {item.link && (isInternal ? (
+                <Link className="project-link" to={item.link}>{item.action || "Ver proyecto"} <span aria-hidden="true">→</span></Link>
+              ) : (
+                <a className="project-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.action || "Ver proyecto"} <span aria-hidden="true">↗</span></a>
+              ))}
+            </div>
+          </article>
         );
       })}
     </div>

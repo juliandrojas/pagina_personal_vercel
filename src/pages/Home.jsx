@@ -1,68 +1,19 @@
-import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Hero from "../components/Hero";
 import Title from "../components/Title";
-import { WHATSAPP_URL } from "../utils/contact.js";
+import CONTACT, { WHATSAPP_URL } from "../utils/contact.js";
+import { galleryProjectsImages } from "../data/gallery.js";
 
 export default function Home() {
-  // 👇 Inicializa tooltips de Bootstrap
-  useEffect(() => {
-    const tooltipTriggerList = [].slice.call(
-      document.querySelectorAll('[data-bs-toggle="tooltip"]'),
-    );
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new window.bootstrap.Tooltip(tooltipTriggerEl);
-    });
-
-    // Limpieza al desmontar
-    return () => {
-      tooltipTriggerList.forEach((tooltip) => tooltip.dispose?.());
-    };
-  }, []);
-
-  const gallerySkillsImages = [
-    {
-      src: "/logo.jpeg",
-      alt: "Tutorías Personalizadas",
-      description: "Tutorías Personalizadas",
-    },
-    {
-      src: "/img-apps.png",
-      alt: "Desarrollo de Aplicaciones",
-      description: "Desarrollo de Aplicaciones Web y Móviles",
-    },
-    // ... más elementos
-  ];
-  const galleryProjectsImages = [
-    {
-      src: "/img-biblioteca.png",
-      alt: "Sistema de biblioteca",
-      description: "Prototipo de gestión de libros",
-      type: "proyecto", // ← clave para personalizar
-    },
-    {
-      src: "/img-patrones.jpeg",
-      alt: "Uso de Patrones de Software en Java",
-      description: "Uso de Patrones de Software en Java",
-      type: "proyecto",
-      link: "https://github.com/juliandrojas/ProyectoSmartHomeExposicion",
-    },
-    {
-      src: "/img-biblioteca.png",
-      alt: "SICAE",
-      description: "Sistema de Control de Asignación de Equipos",
-      type: "proyecto",
-      link: "https://sicaepetrocasinos.vercel.app",
-    },
-  ];
   return (
-    <div>
+    <>
       <Hero />
-      <div className="container">
-        <section id="about_me" className="mt-5 pt-4 pb-5">
-          <Title text="Conoce más sobre mí" />
-
+      <main>
+      <div className="container page-content">
+        <section id="about_me" className="content-section">
+          <p className="section-eyebrow">Perfil profesional</p>
+          <Title text="Tecnología con criterio y colaboración" />
           <div className="row align-items-center gy-4">
             {/* Imagen — ahora con efecto suave y sombra */}
             <div className="col-md-5 col-lg-4 text-center">
@@ -164,32 +115,46 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="skills" className="mt-6 pt-3 pb-3">
-          <Title text="Habilidades" />
-          <Gallery images={gallerySkillsImages} interactive={false} />
+        <section id="skills" className="content-section">
+          <p className="section-eyebrow">Cómo puedo aportar</p>
+          <Title text="Servicios y fortalezas" />
+          <div className="service-grid">
+            <article className="service-item">
+              <span aria-hidden="true">01</span>
+              <h3>Desarrollo web</h3>
+              <p>Interfaces responsivas y soluciones web pensadas para ser claras, útiles y fáciles de mantener.</p>
+            </article>
+            <article className="service-item">
+              <span aria-hidden="true">02</span>
+              <h3>Software con estructura</h3>
+              <p>Aplicación de fundamentos, patrones de diseño y buenas prácticas para resolver problemas reales.</p>
+            </article>
+            <article className="service-item">
+              <span aria-hidden="true">03</span>
+              <h3>Tutorías técnicas</h3>
+              <p>Acompañamiento personalizado para comprender conceptos, organizar proyectos y avanzar con confianza.</p>
+            </article>
+          </div>
         </section>
-        <section id="projects" className="mt-6 pt-3">
-          <Title text="Proyectos" />
+        <section id="projects" className="content-section">
+          <p className="section-eyebrow">Trabajo seleccionado</p>
+          <Title text="Proyectos con propósito" />
           <Gallery images={galleryProjectsImages} />
         </section>
-        <section id="blog" className="mt-6 pt-3">
-          <Title text="Blog" />
-          <p className="text-center">Próximamente...</p>
-        </section>
-        <section id="contact" className="mt-6 pt-3">
-          <Title text="Contacto" />
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-success w-100 py-3"
-          >
-            📲 Escríbeme por WhatsApp
-          </a>
+        <section id="contact" className="contact-panel content-section">
+          <div>
+            <p className="section-eyebrow">Contacto</p>
+            <h2>¿Tienes una idea o un reto tecnológico?</h2>
+            <p>Cuéntame qué necesitas y conversemos sobre el siguiente paso.</p>
+          </div>
+          <div className="contact-actions">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success">Escribir por WhatsApp <span aria-hidden="true">↗</span></a>
+            <a href={CONTACT.social.github} target="_blank" rel="noopener noreferrer" className="contact-github">Ver GitHub <span aria-hidden="true">↗</span></a>
+          </div>
         </section>
       </div>
-      <br />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

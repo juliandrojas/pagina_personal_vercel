@@ -1,0 +1,32 @@
+export const galleryProjectsImages = [
+  {
+    src: "/plantillas.png",
+    alt: "Vista de una solución web para negocios",
+    title: "Plantillas y soluciones web",
+    summary: "Sitios listos para adaptar a la identidad y necesidades de cada negocio.",
+    type: "Soluciones a medida",
+    stack: ["React", "Bootstrap", "Responsive"],
+    link: "/templates",
+    action: "Explorar plantillas",
+  },
+  {
+    src: "/img-patrones.jpeg",
+    alt: "Proyecto de patrones de software aplicado a un sistema conectado",
+    title: "Patrones de software en Java",
+    summary: "Aplicación académica que explora patrones de diseño en un escenario de hogar inteligente.",
+    type: "Desarrollo de software",
+    stack: ["Java", "Patrones de diseño"],
+    link: "https://github.com/juliandrojas/ProyectoSmartHomeExposicion",
+    action: "Ver código",
+  },
+  {
+    src: "/img-biblioteca.png",
+    alt: "Sistema de control de asignación de equipos SICAE",
+    title: "SICAE",
+    summary: "Sistema para organizar y controlar la asignación de equipos de forma centralizada.",
+    type: "Aplicación web",
+    stack: ["Web app", "Gestión de equipos"],
+    link: "https://sicaepetrocasinos.vercel.app",
+    action: "Ver demo",
+  },
+];
