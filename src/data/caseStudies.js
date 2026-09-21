@@ -1,10 +1,10 @@
 export const caseStudies = {
   "sistema-gestion-ti": {
     type: "Sistema interno · caso confidencial",
-    title: "Sistema de gestión de Tecnologías de la Información",
-    lead: "Una solución interna desarrollada para concentrar y dar trazabilidad a procesos de TI dentro de la empresa donde trabajo.",
-    image: "/img-apps.png",
-    imageAlt: "Representación de un sistema de gestión de tecnologías de la información",
+    title: "Sistema de Gestión de Tecnologías de la Información - SIGTI",
+    lead: "Una solución interna desarrollada para concentrar y dar trazabilidad a procesos de TI dentro de Petrocasinos S.A.",
+    image: "/sigti-sistema-gestion-ti.png",
+    imageAlt: "SIGTI, sistema de gestión de tecnologías de la información, con módulos de préstamos, mantenimientos y equipos",
     tags: ["Aplicación web", "Gestión TI", "Procesos internos"],
     challenge: "Los procesos de Tecnologías de la Información requieren información organizada y seguimiento continuo. El reto fue crear una solución que reuniera el trabajo operativo en un solo punto de consulta.",
     solution: "Desarrollé un sistema interno orientado a estructurar la gestión de TI, facilitando el registro, la consulta y el seguimiento de la información necesaria para la operación.",
@@ -13,7 +13,7 @@ export const caseStudies = {
       "Consulta y seguimiento de procesos internos de TI.",
       "Base organizada para mejorar la trazabilidad operativa.",
     ],
-    role: "Participé en el desarrollo de la solución, traduciendo una necesidad operativa en una herramienta digital de uso interno.",
+    role: "Desarrollé la herramienta como una solución digital de uso interno para atender una necesidad operativa de la gestión de TI.",
     outcome: "El sistema facilita una gestión más ordenada de la información tecnológica y crea una base para continuar mejorando los procesos internos.",
     confidential: true,
   },

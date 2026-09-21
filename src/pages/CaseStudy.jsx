@@ -3,6 +3,23 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { caseStudies } from "../data/caseStudies.js";
 import { WHATSAPP_URL } from "../utils/contact.js";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  BarChart3,
+  ClipboardCheck,
+  Database,
+  ListChecks,
+  MessageCircle,
+  MessagesSquare,
+  SearchCheck,
+  ShieldCheck,
+} from "lucide-react";
+
+const capabilityIcons = {
+  "sistema-gestion-ti": [Database, SearchCheck, BarChart3],
+  "bot-tutorias-whatsapp": [MessagesSquare, ClipboardCheck, ListChecks],
+};
 
 export default function CaseStudy() {
   const { slug } = useParams();
@@ -18,7 +35,7 @@ export default function CaseStudy() {
       <main className="case-study">
         <section className="case-hero">
           <div className="container">
-            <Link className="back-link" to="/#projects">← Volver a proyectos</Link>
+            <Link className="back-link" to="/#projects"><ArrowLeft aria-hidden="true" size={17} /> Volver a proyectos</Link>
             <p className="case-type">{study.type}</p>
             <h1>{study.title}</h1>
             <p className="case-lead">{study.lead}</p>
@@ -31,10 +48,10 @@ export default function CaseStudy() {
         <div className="container case-content">
           {study.confidential && (
             <aside className="confidential-note" aria-label="Nota de confidencialidad">
-              <strong>Información protegida.</strong> Este caso describe el enfoque y el valor del proyecto sin revelar datos, interfaces ni procesos confidenciales de la empresa.
+              <ShieldCheck aria-hidden="true" size={20} /><div><strong>Información protegida.</strong> Este caso describe el enfoque y el valor del proyecto sin revelar datos, interfaces ni procesos confidenciales de la empresa.</div>
             </aside>
           )}
-          <div className="case-intro-grid">
+          <div className="case-intro-grid" data-reveal>
             <img src={study.image} alt={study.imageAlt} className="case-image" />
             <div>
               <p className="section-eyebrow">El contexto</p>
@@ -46,16 +63,25 @@ export default function CaseStudy() {
             </div>
           </div>
 
-          <section className="case-section">
+          <section className="case-section" data-reveal>
             <p className="section-eyebrow">Alcance funcional</p>
             <h2>Qué aporta la solución</h2>
             <ul className="capability-list">
-              {study.capabilities.map((capability, index) => <li key={capability}><span aria-hidden="true">0{index + 1}</span>{capability}</li>)}
+              {study.capabilities.map((capability, index) => {
+                const CapabilityIcon = capabilityIcons[slug]?.[index] ?? ListChecks;
+
+                return (
+                  <li key={capability}>
+                    <span className="capability-icon" aria-hidden="true"><CapabilityIcon size={22} strokeWidth={1.8} /></span>
+                    {capability}
+                  </li>
+                );
+              })}
             </ul>
           </section>
 
           {study.workflow && (
-            <section className="case-section">
+            <section className="case-section" data-reveal>
               <p className="section-eyebrow">Flujo de atención</p>
               <h2>Una conversación más ordenada</h2>
               <ol className="workflow-list">
@@ -64,15 +90,15 @@ export default function CaseStudy() {
             </section>
           )}
 
-          <section className="case-summary">
-            <div><p className="section-eyebrow">Mi aporte</p><h2>De la necesidad a una herramienta útil</h2><p>{study.role}</p></div>
+          <section className="case-summary" data-reveal>
+            <div><p className="section-eyebrow">Mi aporte</p><h2>Desarrollo de la herramienta</h2><p>{study.role}</p></div>
             <div><p className="section-eyebrow">Resultado</p><p>{study.outcome}</p></div>
           </section>
 
-          <section className="case-cta">
+          <section className="case-cta" data-reveal>
             <h2>¿Necesitas una solución similar?</h2>
             <p>Conversemos sobre tu reto y el siguiente paso.</p>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success">Escribir por WhatsApp <span aria-hidden="true">↗</span></a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success"><MessageCircle aria-hidden="true" size={18} /> Escribir por WhatsApp <ArrowUpRight aria-hidden="true" size={18} /></a>
           </section>
         </div>
       </main>

@@ -1,5 +1,6 @@
 // Footer.jsx
 import CONTACT, { WHATSAPP_URL } from "../utils/contact.js";
+import { Camera, Code2, MessageCircle, Users } from "lucide-react";
 
 export default function Footer() {
   const { social } = CONTACT;
@@ -14,12 +15,12 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="btn btn-success btn-sm px-2 py-1 d-flex align-items-center gap-1"
           >
-            <span aria-hidden="true">↗</span>
+            <MessageCircle aria-hidden="true" size={15} />
             <span>WhatsApp</span>
           </a>
           {social.github && (
             <a href={social.github} target="_blank" rel="noopener noreferrer" className="btn btn-outline-light btn-sm px-2 py-1 d-flex align-items-center gap-1">
-              <span aria-hidden="true">↗</span><span>GitHub</span>
+              <Code2 aria-hidden="true" size={15} /><span>GitHub</span>
             </a>
           )}
           {social.facebook && (
@@ -29,7 +30,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn btn-primary btn-sm px-2 py-1 d-flex align-items-center gap-1"
             >
-              <span aria-hidden="true">↗</span>
+              <Users aria-hidden="true" size={15} />
               <span>Facebook</span>
             </a>
           )}
@@ -40,7 +41,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn btn-info btn-sm px-2 py-1 d-flex align-items-center gap-1"
             >
-              <span aria-hidden="true">↗</span>
+              <Camera aria-hidden="true" size={15} />
               <span>Instagram</span>
             </a>
           )}

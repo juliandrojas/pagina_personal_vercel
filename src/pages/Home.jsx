@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Title from "../components/Title";
 import CONTACT, { WHATSAPP_URL } from "../utils/contact.js";
 import { galleryProjectsImages } from "../data/gallery.js";
+import { ArrowUpRight, BookOpen, Code2, GraduationCap, Handshake, Lightbulb, Megaphone, MessageCircle, Rocket } from "lucide-react";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <Hero />
       <main>
       <div className="container page-content">
-        <section id="about_me" className="content-section">
+        <section id="about_me" className="content-section" data-reveal>
           <p className="section-eyebrow">Perfil profesional</p>
           <Title text="Tecnología con criterio y colaboración" />
           <div className="row align-items-center gy-4">
@@ -46,7 +47,7 @@ export default function Home() {
                 <div className="row g-4">
                   <div className="col-12 col-md-6">
                     <div className="d-flex align-items-start gap-3">
-                      <span className="fs-4 text-success">💡</span>
+                      <Lightbulb className="profile-icon" aria-hidden="true" size={24} />
                       <div>
                         <h6 className="text-dark mb-1">
                           Resiliencia & Liderazgo
@@ -60,7 +61,7 @@ export default function Home() {
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="d-flex align-items-start gap-3">
-                      <span className="fs-4 text-info">📚</span>
+                      <BookOpen className="profile-icon" aria-hidden="true" size={24} />
                       <div>
                         <h6 className="text-dark mb-1">
                           Autoaprendizaje constante
@@ -74,7 +75,7 @@ export default function Home() {
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="d-flex align-items-start gap-3">
-                      <span className="fs-4 text-warning">🤝</span>
+                      <Handshake className="profile-icon" aria-hidden="true" size={24} />
                       <div>
                         <h6 className="text-dark mb-1">
                           Colaboración efectiva
@@ -88,7 +89,7 @@ export default function Home() {
                   </div>
                   <div className="col-12 col-md-6">
                     <div className="d-flex align-items-start gap-3">
-                      <span className="fs-4 text-primary">🚀</span>
+                      <Rocket className="profile-icon" aria-hidden="true" size={24} />
                       <div>
                         <h6 className="text-dark mb-1">
                           Innovación & Aprendizaje
@@ -115,41 +116,41 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="skills" className="content-section">
+        <section id="skills" className="content-section" data-reveal>
           <p className="section-eyebrow">Cómo puedo aportar</p>
-          <Title text="Servicios y fortalezas" />
+          <Title text="Soluciones que puedo aportar" />
           <div className="service-grid">
             <article className="service-item">
-              <span aria-hidden="true">01</span>
-              <h3>Desarrollo web</h3>
-              <p>Interfaces responsivas y soluciones web pensadas para ser claras, útiles y fáciles de mantener.</p>
+              <Code2 className="service-icon" aria-hidden="true" size={28} />
+              <h3>Desarrollo de soluciones digitales</h3>
+              <p>Diseño y desarrollo aplicaciones web con una estructura clara, responsiva y pensada para resolver necesidades reales.</p>
             </article>
             <article className="service-item">
-              <span aria-hidden="true">02</span>
-              <h3>Software con estructura</h3>
-              <p>Aplicación de fundamentos, patrones de diseño y buenas prácticas para resolver problemas reales.</p>
-            </article>
-            <article className="service-item">
-              <span aria-hidden="true">03</span>
+              <GraduationCap className="service-icon" aria-hidden="true" size={28} />
               <h3>Tutorías técnicas</h3>
               <p>Acompañamiento personalizado para comprender conceptos, organizar proyectos y avanzar con confianza.</p>
             </article>
+            <article className="service-item">
+              <Megaphone className="service-icon" aria-hidden="true" size={28} />
+              <h3>Marketing digital</h3>
+              <p>Apoyo la presencia digital de negocios con contenido, comunicación clara y estrategias orientadas a conectar con su audiencia.</p>
+            </article>
           </div>
         </section>
-        <section id="projects" className="content-section">
+        <section id="projects" className="content-section" data-reveal>
           <p className="section-eyebrow">Trabajo seleccionado</p>
           <Title text="Proyectos con propósito" />
           <Gallery images={galleryProjectsImages} />
         </section>
-        <section id="contact" className="contact-panel content-section">
+        <section id="contact" className="contact-panel content-section" data-reveal>
           <div>
             <p className="section-eyebrow">Contacto</p>
             <h2>¿Tienes una idea o un reto tecnológico?</h2>
             <p>Cuéntame qué necesitas y conversemos sobre el siguiente paso.</p>
           </div>
           <div className="contact-actions">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success">Escribir por WhatsApp <span aria-hidden="true">↗</span></a>
-            <a href={CONTACT.social.github} target="_blank" rel="noopener noreferrer" className="contact-github">Ver GitHub <span aria-hidden="true">↗</span></a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-success"><MessageCircle aria-hidden="true" size={18} /> Escribir por WhatsApp <ArrowUpRight aria-hidden="true" size={18} /></a>
+            <a href={CONTACT.social.github} target="_blank" rel="noopener noreferrer" className="contact-github">Ver GitHub <ArrowUpRight aria-hidden="true" size={18} /></a>
           </div>
         </section>
       </div>

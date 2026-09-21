@@ -1,5 +1,6 @@
 // src/components/Gallery.jsx
 import { Link } from "react-router-dom";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export default function Gallery({ images }) {
   return (
@@ -20,9 +21,9 @@ export default function Gallery({ images }) {
                 </ul>
               )}
               {item.link && (isInternal ? (
-                <Link className="project-link" to={item.link}>{item.action || "Ver proyecto"} <span aria-hidden="true">→</span></Link>
+                <Link className="project-link" to={item.link}>{item.action || "Ver proyecto"} <ArrowRight aria-hidden="true" size={17} /></Link>
               ) : (
-                <a className="project-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.action || "Ver proyecto"} <span aria-hidden="true">↗</span></a>
+                <a className="project-link" href={item.link} target="_blank" rel="noopener noreferrer">{item.action || "Ver proyecto"} <ArrowUpRight aria-hidden="true" size={17} /></a>
               ))}
             </div>
           </article>

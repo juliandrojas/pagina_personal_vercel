@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { WHATSAPP_URL } from "../utils/contact.js"; // ← importa tu configuración centralizada
+import { AlertTriangle, ArrowLeft, Construction, MessageCircle, PenLine } from "lucide-react";
 
 // Configuración centralizada: fácil de extender
 const CONFIG = {
@@ -10,7 +11,7 @@ const CONFIG = {
     subtitle: "Estoy construyendo algo especial",
     message:
       "Este proyecto aún está en fase de construcción. ¡Gracias por tu paciencia!",
-    icon: "🏗️",
+    icon: Construction,
     color: "text-primary",
     bg: "bg-blue-50",
   },
@@ -19,7 +20,7 @@ const CONFIG = {
     subtitle: "Pronto compartiré conocimientos",
     message:
       "Esta entrada del blog se publicará muy pronto. Suscríbete para no perdértela.",
-    icon: "✍️",
+    icon: PenLine,
     color: "text-info",
     bg: "bg-cyan-50",
   },
@@ -28,7 +29,7 @@ const CONFIG = {
     subtitle: "Aún no está listo",
     message:
       "Lo sentimos, este contenido aún no está disponible. Vuelve pronto.",
-    icon: "🚧",
+    icon: AlertTriangle,
     color: "text-muted",
     bg: "bg-gray-50",
   },
@@ -53,7 +54,7 @@ export default function NotAvailable() {
         style={{ maxWidth: "500px" }}
       >
         {/* Ícono grande */}
-        <div className={`fs-1 mb-4 ${config.color}`}>{config.icon}</div>
+        <config.icon className={`not-available-icon ${config.color}`} aria-hidden="true" size={48} />
 
         {/* Título */}
         <h2 className="text-dark fw-bold mb-2">{config.title}</h2>
@@ -73,7 +74,7 @@ export default function NotAvailable() {
           onClick={() => navigate(-1)}
           className="btn btn-outline-dark px-4 py-2 rounded-pill d-flex align-items-center gap-2 mx-auto"
         >
-          <span>←</span>
+          <ArrowLeft aria-hidden="true" size={18} />
           <span>Volver</span>
         </button>
 
@@ -87,7 +88,7 @@ export default function NotAvailable() {
               rel="noopener noreferrer"
               className="text-success fw-medium"
             >
-              Escríbeme por WhatsApp
+              <MessageCircle aria-hidden="true" size={16} /> Escríbeme por WhatsApp
             </a>
           </p>
         </div>

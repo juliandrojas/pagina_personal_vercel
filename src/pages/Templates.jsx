@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Title from "../components/Title";
+import { ArrowUpRight, Globe2 } from "lucide-react";
 
 // Array con la información de tus plantillas comercializables
 const templatesData = [
@@ -14,7 +15,7 @@ const templatesData = [
       "Catálogo interactivo optimizado para tiendas de ropa. Incluye filtro por categorías, botón de promociones, ordenamiento de precios y enlace directo a WhatsApp.",
     demoUrl: "https://demo-tienda-ropa.vercel.app/",
     tags: ["React", "Bootstrap", "Responsive"],
-    badge: "Más Vendida 🔥",
+    badge: "Más vendida",
   },
   /*
   Aquí podrás agregar más plantillas en el futuro (ej. Restaurante, Barbería, Servicios):
@@ -45,7 +46,7 @@ export default function Templates() {
 
       <main className="pt-5">
         <section className="container py-5" id="plantillas">
-          <div className="text-center mb-5">
+          <div className="text-center mb-5" data-reveal>
             <span className="badge bg-danger text-uppercase px-3 py-2 rounded-pill mb-2 fw-semibold">
               Soluciones Listas para Usar
             </span>
@@ -56,7 +57,7 @@ export default function Templates() {
           </div>
 
           {/* Grid de Plantillas */}
-          <div className="row g-4 justify-content-center">
+          <div className="row g-4 justify-content-center" data-reveal>
             {templatesData.map((template) => (
               <div key={template.id} className="col-12 col-md-6 col-lg-4">
                 <div className="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
@@ -109,7 +110,7 @@ export default function Templates() {
                       rel="noopener noreferrer"
                       className="btn btn-outline-dark w-100 rounded-pill btn-sm fw-medium py-2 d-flex align-items-center justify-content-center gap-2"
                     >
-                      Ver Demo en Vivo 🌐
+                      <Globe2 aria-hidden="true" size={17} /> Ver demo en vivo <ArrowUpRight aria-hidden="true" size={17} />
                     </a>
                   </div>
                 </div>
