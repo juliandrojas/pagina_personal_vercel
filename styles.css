@@ -201,3 +201,51 @@ a:focus-visible, button:focus-visible { outline: 3px solid #facc15; outline-offs
   .contact-actions { width: 100%; }
   .contact-actions .btn { width: 100%; }
 }
+
+.case-study { padding-top: 0; }
+.case-hero { padding: clamp(4rem, 9vw, 7rem) 0; background: linear-gradient(120deg, #0c273d, #0b6777); color: #fff; }
+.back-link { display: inline-block; margin-bottom: 3rem; color: #d6f6e7; font-weight: 700; text-decoration: underline; text-underline-offset: 0.3rem; }
+.back-link:hover { color: #fff; }
+.case-type { margin: 0 0 1rem; color: #8cf0c2; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.case-hero h1 { max-width: 15ch; margin: 0; font-size: clamp(2.7rem, 6vw, 5.4rem); letter-spacing: -0.055em; line-height: 0.98; }
+.case-lead { max-width: 43rem; margin: 1.5rem 0 0; color: #d9f0f4; font-size: 1.15rem; line-height: 1.7; }
+.case-tags { margin-top: 1.5rem; }
+.case-tags li { color: #e4fbf1; background: rgba(255, 255, 255, 0.12); }
+.case-content { padding-top: clamp(3rem, 7vw, 6rem); padding-bottom: 5rem; }
+.confidential-note { margin-bottom: 3rem; padding: 1rem 1.2rem; color: #234e52; background: #e8f6f3; border-left: 4px solid #0f766e; border-radius: 0.35rem; line-height: 1.6; }
+.confidential-note strong { display: block; }
+.case-intro-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr); align-items: start; gap: clamp(2rem, 6vw, 6rem); }
+.case-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0.9rem; box-shadow: 0 1.25rem 2.5rem rgba(16, 42, 67, 0.15); }
+.case-intro-grid h2, .case-section h2, .case-summary h2, .case-cta h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); letter-spacing: -0.04em; }
+.case-intro-grid p:not(.section-eyebrow), .case-summary p:not(.section-eyebrow) { color: var(--muted); line-height: 1.7; }
+.case-solution-label { margin-top: 2rem; }
+.case-section { padding-top: clamp(4rem, 8vw, 7rem); }
+.capability-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 2rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.capability-list li { min-height: 11rem; padding: 1.5rem; border-right: 1px solid var(--line); color: #334e68; line-height: 1.6; }
+.capability-list li:last-child { border: 0; }
+.capability-list span { display: block; margin-bottom: 2.4rem; color: var(--teal); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; }
+.workflow-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; padding: 0; margin: 2rem 0 0; list-style: none; counter-reset: steps; }
+.workflow-list li { display: grid; gap: 1rem; min-height: 10rem; padding: 1.25rem; background: var(--surface); border-radius: 0.6rem; color: #334e68; font-weight: 650; line-height: 1.45; }
+.workflow-list span { display: grid; width: 2rem; height: 2rem; place-items: center; color: #fff; background: var(--teal); border-radius: 50%; font-size: 0.9rem; }
+.case-summary { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: clamp(2rem, 8vw, 7rem); margin-top: clamp(4rem, 8vw, 7rem); padding: clamp(2rem, 5vw, 4rem) 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.case-summary > div:last-child { padding-top: 1rem; }
+.case-cta { margin-top: clamp(4rem, 8vw, 7rem); padding: clamp(2rem, 5vw, 4rem); color: #fff; background: var(--ink); border-radius: 1rem; }
+.case-cta h2 { margin: 0; }
+.case-cta p { margin: 0.6rem 0 1.5rem; color: #d9e2ec; }
+.case-cta .btn { font-weight: 700; }
+
+@media (max-width: 991.98px) {
+  .case-intro-grid, .case-summary { grid-template-columns: 1fr; }
+  .capability-list { grid-template-columns: 1fr; }
+  .capability-list li, .capability-list li:last-child { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .capability-list li:last-child { border-bottom: 0; }
+  .capability-list span { margin-bottom: 1rem; }
+  .workflow-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575.98px) {
+  .case-study { padding-top: 0; }
+  .case-hero { padding-block: 3rem; }
+  .back-link { margin-bottom: 2.5rem; }
+  .workflow-list { grid-template-columns: 1fr; }
+  .workflow-list li { min-height: auto; }
+}

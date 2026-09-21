@@ -1,0 +1,38 @@
+export const caseStudies = {
+  "sistema-gestion-ti": {
+    type: "Sistema interno · caso confidencial",
+    title: "Sistema de gestión de Tecnologías de la Información",
+    lead: "Una solución interna desarrollada para concentrar y dar trazabilidad a procesos de TI dentro de la empresa donde trabajo.",
+    image: "/img-apps.png",
+    imageAlt: "Representación de un sistema de gestión de tecnologías de la información",
+    tags: ["Aplicación web", "Gestión TI", "Procesos internos"],
+    challenge: "Los procesos de Tecnologías de la Información requieren información organizada y seguimiento continuo. El reto fue crear una solución que reuniera el trabajo operativo en un solo punto de consulta.",
+    solution: "Desarrollé un sistema interno orientado a estructurar la gestión de TI, facilitando el registro, la consulta y el seguimiento de la información necesaria para la operación.",
+    capabilities: [
+      "Centralización de información para la gestión tecnológica.",
+      "Consulta y seguimiento de procesos internos de TI.",
+      "Base organizada para mejorar la trazabilidad operativa.",
+    ],
+    role: "Participé en el desarrollo de la solución, traduciendo una necesidad operativa en una herramienta digital de uso interno.",
+    outcome: "El sistema facilita una gestión más ordenada de la información tecnológica y crea una base para continuar mejorando los procesos internos.",
+    confidential: true,
+  },
+  "bot-tutorias-whatsapp": {
+    type: "Automatización conversacional",
+    title: "Kazu — asistente de WhatsApp para tutorías",
+    lead: "Kazu es un asistente conversacional creado para organizar solicitudes y ofrecer una primera atención más ágil a las personas interesadas en mis tutorías.",
+    image: "/kazu-bot-tutorias.png",
+    imageAlt: "Kazu, asistente de tutorías, trabajando junto a un portátil y cuadernos de estudio",
+    tags: ["WhatsApp", "Automatización", "Tutorías"],
+    challenge: "Atender mensajes, identificar la necesidad de cada estudiante y organizar solicitudes de forma manual consume tiempo y puede hacer más difícil dar seguimiento.",
+    solution: "Construí a Kazu como un bot de WhatsApp que sirve como primer punto de contacto: recoge la necesidad inicial, orienta la conversación y ayuda a ordenar las solicitudes de tutoría.",
+    capabilities: [
+      "Atención inicial de consultas frecuentes.",
+      "Registro estructurado de necesidades de tutoría.",
+      "Organización de solicitudes para continuar el proceso de atención.",
+    ],
+    workflow: ["La persona escribe", "El bot identifica la necesidad", "Se registra o clasifica la solicitud", "Se continúa la atención de la tutoría"],
+    role: "Diseñé a Kazu y desarrollé el asistente como una herramienta para reducir tareas manuales y ordenar la operación del servicio de tutorías.",
+    outcome: "Kazu permite dar una primera respuesta más consistente y concentrar la información necesaria para gestionar cada solicitud.",
+  },
+};

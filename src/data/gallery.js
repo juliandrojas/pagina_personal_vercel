@@ -1,5 +1,25 @@
 export const galleryProjectsImages = [
   {
+    src: "/img-apps.png",
+    alt: "Representación de un sistema interno para la gestión de tecnologías de la información",
+    title: "Sistema de gestión TI",
+    summary: "Solución interna desarrollada para organizar procesos de Tecnologías de la Información en mi empresa.",
+    type: "Sistema interno · caso confidencial",
+    stack: ["Aplicación web", "Gestión TI", "Procesos internos"],
+    link: "/proyectos/sistema-gestion-ti",
+    action: "Ver caso de estudio",
+  },
+  {
+    src: "/kazu-bot-tutorias.png",
+    alt: "Kazu, asistente de WhatsApp para tutorías, frente a un portátil y material de estudio",
+    title: "Kazu — asistente de tutorías",
+    summary: "Asistente de WhatsApp que organiza solicitudes y ofrece una primera atención ágil para mi servicio de tutorías.",
+    type: "Automatización conversacional",
+    stack: ["WhatsApp", "Automatización", "Tutorías"],
+    link: "/proyectos/bot-tutorias-whatsapp",
+    action: "Conocer a Kazu",
+  },
+  {
     src: "/plantillas.png",
     alt: "Vista de una solución web para negocios",
     title: "Plantillas y soluciones web",
