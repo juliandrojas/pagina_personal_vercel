@@ -457,7 +457,7 @@ html.scroll-effects-ready [data-reveal].is-visible {
 .hero {
   width: 100%;
   min-width: 100%;
-  background: var(--color-surface);
+  background: linear-gradient(118deg, #17171a 0%, #211719 50%, #321a1f 100%);
 }
 .hero-parallax-layer { display: none; }
 
