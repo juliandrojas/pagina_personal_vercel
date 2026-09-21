@@ -31,7 +31,7 @@ export default function CaseStudy() {
 
   return (
     <>
-      <Navbar brand="Julián Rojas" items={[{ title: "Inicio", url: "/" }, { title: "Proyectos", url: "/#projects" }]} />
+      <Navbar brand="JR - Portafolio" items={[{ title: "Inicio", url: "/" }, { title: "Proyectos", url: "/#projects" }]} />
       <main className="case-study">
         <section className="case-hero">
           <div className="container">

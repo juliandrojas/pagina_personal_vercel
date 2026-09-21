@@ -36,7 +36,7 @@ export default function Templates() {
   return (
     <>
       <Navbar
-        brand="Julián Rojas"
+        brand="JR - Portafolio"
         brandUrl="/"
         items={[
           { title: "Inicio", url: "/", active: false },

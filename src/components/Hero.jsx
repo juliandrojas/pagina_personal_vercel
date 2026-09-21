@@ -38,7 +38,7 @@ export default function Hero() {
 
   return (
     <>
-      <Navbar items={navItems} brand="Julián Rojas" />
+      <Navbar items={navItems} brand="JR - Portafolio" />
       <header ref={heroRef} className="hero hero-parallax" aria-labelledby="hero-title">
         <div className="hero-parallax-layer" aria-hidden="true" />
         <div className="hero-content">

@@ -453,12 +453,13 @@ html.scroll-effects-ready [data-reveal].is-visible {
   }
 }
 
-/* El hero es de borde a borde; el degradado conserva presencia también en los extremos. */
+/* Hero de borde a borde con una sola superficie visual. */
 .hero {
   width: 100%;
   min-width: 100%;
-  background: linear-gradient(118deg, #17171a 0%, #201719 48%, #351b20 100%);
+  background: var(--color-surface);
 }
+.hero-parallax-layer { display: none; }
 
 /* Navegación siempre disponible durante el recorrido. */
 #root > .site-nav {

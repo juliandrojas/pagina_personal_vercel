@@ -1,7 +1,7 @@
 // Navbar.jsx
 import { Link } from "react-router-dom";
 
-export default function Navbar({ brand = "Julián Rojas", brandUrl = "/", items = [] }) {
+export default function Navbar({ brand = "JR - Portafolio", brandUrl = "/", items = [] }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark site-nav fixed-top" aria-label="Navegación principal">
       <div className="container">
