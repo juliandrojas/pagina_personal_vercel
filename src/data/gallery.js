@@ -19,4 +19,12 @@ export const galleryProjectsImages = [
     link: "/proyectos/bot-tutorias-whatsapp",
     action: "Conocer a Kazu",
   },
+  {
+    src: "/rutas-amb.png",
+    alt: "Rutas AMB, aplicación móvil para consultar rutas del transporte público colectivo de Bucaramanga",
+    title: "Rutas AMB",
+    summary: "Aplicación móvil en desarrollo para ayudar a las personas a conocer el trazado de las rutas del Transporte Público Colectivo de Bucaramanga.",
+    type: "Aplicación móvil · en desarrollo",
+    stack: ["Movilidad urbana", "Transporte público", "Bucaramanga"],
+  },
 ];

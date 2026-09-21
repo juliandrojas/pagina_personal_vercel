@@ -16,7 +16,7 @@ export default function Gallery({ images }) {
               <h3>{item.title || item.description}</h3>
               <p>{item.summary}</p>
               {item.stack?.length > 0 && (
-                <ul className="tag-list" aria-label={`Tecnologías usadas en ${item.title || item.description}`}>
+                <ul className="tag-list" aria-label={`Etiquetas de ${item.title || item.description}`}>
                   {item.stack.map((tag) => <li key={tag}>{tag}</li>)}
                 </ul>
               )}
