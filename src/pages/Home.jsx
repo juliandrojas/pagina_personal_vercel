@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import Title from "../components/Title";
 import CONTACT, { WHATSAPP_URL } from "../utils/contact.js";
 import { galleryProjectsImages } from "../data/gallery.js";
-import { ArrowUpRight, BookOpen, Code2, GraduationCap, Handshake, Lightbulb, Megaphone, MessageCircle, Rocket } from "lucide-react";
+import { ArrowUpRight, BookOpen, Code2, GraduationCap, Handshake, Lightbulb, MessageCircle, Rocket, Wrench } from "lucide-react";
 
 export default function Home() {
   return (
@@ -131,9 +131,9 @@ export default function Home() {
               <p>Acompañamiento personalizado para comprender conceptos, organizar proyectos y avanzar con confianza.</p>
             </article>
             <article className="service-item">
-              <Megaphone className="service-icon" aria-hidden="true" size={28} />
-              <h3>Marketing digital</h3>
-              <p>Apoyo la presencia digital de negocios con contenido, comunicación clara y estrategias orientadas a conectar con su audiencia.</p>
+              <Wrench className="service-icon" aria-hidden="true" size={28} />
+              <h3>Soporte tecnológico</h3>
+              <p>Orientación para elegir, organizar e implementar herramientas tecnológicas de acuerdo con las necesidades de personas y pequeños negocios.</p>
             </article>
           </div>
         </section>
