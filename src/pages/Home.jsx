@@ -133,7 +133,7 @@ export default function Home() {
             <article className="service-item">
               <Wrench className="service-icon" aria-hidden="true" size={28} />
               <h3>Soporte tecnológico</h3>
-              <p>Orientación para elegir, organizar e implementar herramientas tecnológicas de acuerdo con las necesidades de personas y pequeños negocios.</p>
+              <p>Orientación para elegir e implementar tecnología útil para personas y pequeños negocios.</p>
             </article>
           </div>
         </section>
